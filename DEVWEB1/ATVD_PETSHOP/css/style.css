@@ -1,0 +1,31 @@
+html {
+    font-size: clamp(1rem, calc(0.5rem + 2vw), 1.625rem);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    padding: 5vw 15vw 5vw 15vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header nav ul {
+    display: flex;
+    gap: 3vw;
+}
+
+header nav ul li:last-child a {
+    background: #3366FF;
+    color: white;
+    padding: 1vw;
+    border-radius: 7px;
+    font-size: 16px; 
+}
+
+/* === Banner Pet === */
+
+section.pet {
+    display: flex;
+    padding: 3vw 10vw 3vw 10vw;
+}
