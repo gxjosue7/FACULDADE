@@ -20,7 +20,7 @@ header nav ul li:last-child a {
     color: white;
     padding: 1vw;
     border-radius: 7px;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 /* === Banner Pet === */
@@ -31,6 +31,7 @@ section.pet {
     padding: 3vw 10vw 3vw 10vw;
     background-color: #F7F5FD;
 }
+
 section.pet div:first-child {
     width: 50%;
     font-size: 20px;
@@ -41,10 +42,12 @@ section.pet div:first-child h2 {
     color: rgba(45, 45, 45, 1);
     font-weight: bold;
 }
+
 section.pet div:first-child p {
     opacity: 50%;
     padding: 3vw 0vw 5vw 0vw
 }
+
 section.pet div:first-child button {
     background-color: rgba(248, 213, 126, 1);
     padding: 1vw 3vw;
@@ -59,20 +62,16 @@ section.video {
     background-color: #F2FAF8;
     padding: 2vw 2vw;
 }
-
-/*PATROCINIOS*/
-section.patrocinios ul{
-    display: flex;
-    justify-content: space-between;
-    padding: 4vw 5vw;
-    gap: 0vw 3.5vw;
-    background-color: #FFFFFF;
+section.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* mantém proporção do vídeo */
 }
 
-
-
-
-
-
-
-
+/*PATROCINIOS*/
+section.patrocinios ul {
+  display: flex;
+  justify-content: center;
+  padding: 5vw 6vw;
+  gap: 0vw 8vw;
+  background-color: #FFFFFF;
+}
