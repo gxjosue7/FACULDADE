@@ -29,7 +29,7 @@ section.pet {
     display: flex;
     justify-content: space-between;
     padding: 3vw 10vw 3vw 10vw;
-
+    background-color: #F7F5FD;
 }
 section.pet div:first-child {
     width: 50%;
@@ -52,11 +52,25 @@ section.pet div:first-child button {
     font-size: 1vw;
 }
 
-/*Section Video*/
+/*Video*/
 section.video {
     display: flex;
     justify-content: center;
+    background-color: #F2FAF8;
+    padding: 2vw 2vw;
 }
+
+/*PATROCINIOS*/
+section.patrocinios ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 4vw 5vw;
+    gap: 0vw 3.5vw;
+    background-color: #FFFFFF;
+}
+
+
+
 
 
 
