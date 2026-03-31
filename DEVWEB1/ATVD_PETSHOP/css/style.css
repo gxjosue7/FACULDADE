@@ -4,7 +4,7 @@ html {
 }
 
 header {
-    padding: 5vw 15vw 5vw 15vw;
+    padding: 5vw 10vw 5vw 10vw;
     display: flex;
     justify-content: space-between;
 
@@ -27,5 +27,38 @@ header nav ul li:last-child a {
 
 section.pet {
     display: flex;
+    justify-content: space-between;
     padding: 3vw 10vw 3vw 10vw;
+
 }
+section.pet div:first-child {
+    width: 50%;
+    font-size: 20px;
+}
+
+section.pet div:first-child h2 {
+    font-size: 2.2rem;
+    color: rgba(45, 45, 45, 1);
+    font-weight: bold;
+}
+section.pet div:first-child p {
+    opacity: 50%;
+    padding: 3vw 0vw 5vw 0vw
+}
+section.pet div:first-child button {
+    background-color: rgba(248, 213, 126, 1);
+    padding: 1vw 3vw;
+    border-radius: 7px;
+    font-size: 1vw;
+}
+
+/*Section Video*/
+section.video {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
