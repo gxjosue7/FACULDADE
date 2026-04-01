@@ -76,6 +76,29 @@ section.logo ul {
   background-color: #FFFFFF;
 }
     
+/* === ICONS === */
+section.icons {
+    justify-content: space-between;
+    padding: 3vw 10vw 3vw 10vw;
+    background-color: #F7F5FD;
+}
+
+section.icons ul {
+    display: flex;
+}
+
+section.icons ul li {
+    padding: 3vw 5vw;
+}
+
+section.icons ul li h4 {
+    font-size: 25px;
+}
+
+section.icons ul li p {
+    font-size: 18px;
+    opacity: 0.7;
+}
 
 
 
