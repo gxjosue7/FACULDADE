@@ -23,7 +23,7 @@ header nav ul li:last-child a {
     font-size: 16px;
 }
 
-/* === Banner Pet === */
+/* === BANNER PET === */
 
 section.pet {
     display: flex;
@@ -55,7 +55,8 @@ section.pet div:first-child button {
     font-size: 1vw;
 }
 
-/*Video*/
+/* === VIDEO === */
+
 section.video {
     display: flex;
     justify-content: center;
@@ -64,14 +65,17 @@ section.video {
 }
 section.video iframe {
   width: 100%;
-  aspect-ratio: 16 / 9; /* mantém proporção do vídeo */
+  aspect-ratio: 16 / 9; 
 }
 
-/*PATROCINIOS*/
-section.patrocinios ul {
+/* === LOGOS === */
+section.logo ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 5vw 6vw;
-  gap: 0vw 8vw;
   background-color: #FFFFFF;
 }
+    
+
+
+
