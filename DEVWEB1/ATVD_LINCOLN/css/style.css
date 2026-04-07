@@ -1,0 +1,97 @@
+/* USO DIRETO */
+html {
+  font-size: clamp(1rem, calc(0.5rem + 2vw), 1.625rem);
+}
+
+/* === TOPO === */
+header {
+    padding: 2vw 10vw 2vw 10vw;
+}
+header nav ul {
+    display: none;
+    font-size: ;
+}
+
+/* === AVISO === */
+
+section.aviso {
+    background: #F6F0E4;
+    padding: 2vw 3vw 2vw 3vw;
+    margin: 2vw 10vw;
+    border-radius: 12px;
+    text-align: center;
+}
+
+section.aviso a {
+    text-decoration: underline;
+}
+
+/* === BANNER === */
+
+section.banner {
+    text-align: center;
+    padding: 2vw 10vw;
+}
+
+section.banner h1 {
+    font-size: 2rem;
+    margin: 3vw 0;
+}
+
+section.banner a {
+    text-decoration: underline;
+}
+
+/* === news === */
+
+section.news {
+    text-align: center;
+    padding: 2vw 10vw;
+}
+
+section.news h2 {
+    font-size: 1.6rem;
+}
+
+section.news ul li {
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    margin: ;
+}
+
+section.news ul li {
+    width: 30%;
+    font-size: 0.7rem;
+    
+}
+
+section.news ul li h3 {
+    font-size: 1.2rem;
+
+}
+
+section.news ul li h4 {
+    font-size: 0.9rem;
+    
+}
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+	header nav > a {
+        display: none;
+    }
+    header nav ul {
+        display: flex;
+        gap: 20px;
+    }
+    section.news ul {
+        display: flex;
+    }
+} 
+

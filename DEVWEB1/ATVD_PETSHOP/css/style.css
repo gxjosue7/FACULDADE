@@ -100,13 +100,15 @@ section.icons ul li p {
     opacity: 0.7;
 }
 
+/* === DYLAN === */
 section.dylan {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    padding: 2vw 1vw 2vw 1vw ;
+    padding: 5vw 1vw 5vw 1vw;
 }
-section.dylan ul:first-child {
-    
+
+section.dylan ul li:last-child p {
+    padding: 0vw 1vw 0vw 2;
 }
