@@ -1,87 +1,63 @@
-/* USO DIRETO */
 html {
   font-size: clamp(1rem, calc(0.5rem + 2vw), 1.625rem);
 }
-
-/* === TOPO === */
+/*=== Header ===*/
 header {
     padding: 2vw 10vw 2vw 10vw;
 }
 header nav ul {
     display: none;
-    font-size: ;
-}
-
-/* === AVISO === */
-
-section.aviso {
+}   
+/*=== Notification ===*/
+section.notification {
     background: #F6F0E4;
+    text-align: center;
     padding: 2vw 3vw 2vw 3vw;
     margin: 2vw 10vw;
-    border-radius: 12px;
-    text-align: center;
+    border-radius: 10px;
 }
-
-section.aviso a {
+section.notification p:last-child{
+    padding: 1vw 0vw 0vw 0vw;
     text-decoration: underline;
 }
-
-/* === BANNER === */
-
+/*=== Banner ===*/
 section.banner {
     text-align: center;
     padding: 2vw 10vw;
 }
-
-section.banner h1 {
+section.banner h1{
     font-size: 2rem;
     margin: 3vw 0;
 }
-
+section.banner p:first-child {
+    margin: 3vw 0;
+}
 section.banner a {
     text-decoration: underline;
 }
-
-/* === news === */
-
+/*===News===*/
 section.news {
     text-align: center;
     padding: 2vw 10vw;
 }
-
 section.news h2 {
     font-size: 1.6rem;
 }
-
 section.news ul li {
     border: 1px solid #E4E4E4;
-    border-radius: 12px;
-    margin: ;
+    border-radius:10px;
 }
-
 section.news ul li {
-    width: 30%;
     font-size: 0.7rem;
-    
+    margin: 4vw 0vw;
 }
-
-section.news ul li h3 {
-    font-size: 1.2rem;
-
-}
-
 section.news ul li h4 {
     font-size: 0.9rem;
-    
+}
+section.news ul li h3 {
+    font-size: 1.2rem;
 }
 
-
-
-
-
-
-
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 600px) {
 	header nav > a {
         display: none;
@@ -92,6 +68,10 @@ section.news ul li h4 {
     }
     section.news ul {
         display: flex;
+        justify-content: space-between;
+    }
+    section.news ul li {
+        width: 30%;
+        font-size: 0.7rem;
     }
 } 
-
