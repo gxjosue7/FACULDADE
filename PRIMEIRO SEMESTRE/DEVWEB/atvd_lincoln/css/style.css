@@ -44,14 +44,46 @@ section.banner a {
     text-decoration: underline;
 }
 
-/*===News===*/
+/*=== What We Do ===*/
+
+section.wwd h1 {
+    font-size: 5vw;
+    padding: 5vw 2vw 12vw 2vw;
+    text-align: center;
+}
+
+section.wwd ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 100px;
+}
+
+section.wwd h2 {
+    text-align: center;
+    padding: 5vw;
+}
+
+section.wwd p {
+    text-align: center;
+
+}
+
+section.wwd div {
+    display: flex;
+    justify-content: center;   
+    padding: 14vw 0 7vw;
+}
+
+/*=== News ===*/
 section.news {
     text-align: center;
     padding: 2vw 10vw;
 }
 
 section.news h2 {
-    font-size: 1.6rem;
+    font-size: 3rem;
+    padding: 10vw 1vw 10vw 1vw;
 }
 
 section.news ul li {
@@ -93,32 +125,3 @@ section.news ul li h3 {
     }
 }
 
-/*===What We Do===*/
-
-section.wwd h1 {
-    font-size: 5vw;
-    padding: 5vw 2vw 12vw 2vw;
-    text-align: center;
-}
-
-section.wwd ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 100px;
-}
-
-section.wwd h2 {
-    text-align: center;
-    padding: 5vw;
-}
-
-section.wwd p {
-    text-align: center;
-
-}
-
-section.wwd div {
-    display: flex;
-    justify-content: center;    
-}
