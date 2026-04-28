@@ -68,7 +68,7 @@ section.video iframe {
   aspect-ratio: 16 / 9; 
 }
 
-/* === LOGOS === */
+/* ====== LOGOS ====== */
 section.logo ul {
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,8 @@ section.logo ul {
   background-color: #FFFFFF;
 }
     
-/* === ICONS === */
+
+/* ====== ICONS ====== */
 section.icons {
     justify-content: space-between;
     padding: 3vw 10vw 3vw 10vw;
@@ -100,15 +101,30 @@ section.icons ul li p {
     opacity: 0.7;
 }
 
-/* === DYLAN === */
-section.dylan {
+/* ===== DYLAN ===== */
+
+section.quote {
     display: flex;
-    flex-direction: row;
+    background: #ECE7FB;
     align-items: center;
-    gap: 40px;
-    padding: 5vw 1vw 5vw 1vw;
+    padding: 4vw 14vw 4vw 20vw;
+    gap: 30px;
+}
+section.quote div:first-child {
+    padding: 2vw 1vw 2vw 1vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-section.dylan ul li:last-child p {
-    padding: 0vw 1vw 0vw 2;
+section.quote div:last-child h3 {
+    font-size: 1.7vw;
+    font-weight: bold;
+    padding: 5vw;
+    margin: 0 0 0.5vw;
+}
+
+section.quote div:last-child p {
+    opacity: 60%;
+    font-size: 1.5vw;
 }
