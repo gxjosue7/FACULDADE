@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMLUADOR DE EMPRÉSTIMO
+    </title>
+
+</head>
+
+<body>
+    <main>
+
+        <section class="emprestimo">
+
+            <form action="#">
+                <label for="renda">Renda bruta mensal (R$)</label>
+                <input type="number" id="renda" placeholder="Ex: 3000">
+
+                <label for="valor">Valor do empréstimo (R$)</label>
+                <input type="number" id="valor" placeholder="Ex: 10000">
+
+                <label for="prazo">Prazo para pagamentos</label>
+                <input type="number" id="prazo" placeholder="Ex: 24, apenas algarismos.">
+                
+                <button onclick="calcular()">Calcular</button>
+
+            </form>
+
+        </section>
+
+    </main>    
+</body>
+</html>
