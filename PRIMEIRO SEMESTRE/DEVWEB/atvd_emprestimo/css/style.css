@@ -3,6 +3,28 @@ html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-section.emprestimo form {
-    display: grid;
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a {
+    text-align: center;
+}
+
+body {
+    padding: 0 2vw 0 2vw;
+    align-items: center;
+}
+
+.card {
+    border-radius: 12px;
+    border-color: 2px solide blue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
