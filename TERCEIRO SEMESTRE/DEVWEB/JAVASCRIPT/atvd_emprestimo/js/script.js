@@ -6,7 +6,6 @@ function pegarDados() {
     };
 }
 
-// 2. Calcular empréstimo
 function calcularEmprestimo(renda, valor, prazo) {
     let anos = prazo / 12;
     let taxa = 0.02 * anos;
@@ -21,12 +20,12 @@ function calcularEmprestimo(renda, valor, prazo) {
 }
 
 function mostrarResultado(parcela, aprovado) {
-    let mensagem = `Parcela mensal: R$ ${parcela.toFixed(2)} <br>`;
+    let mensagem = `Parcela mensal: R$ ${parcela.toFixed(2)}<br>`;
 
     if (aprovado) {
-        mensagem += "Empréstimo dentro do limite";
+        mensagem += "Empréstimo dentro do limite recomendado.";
     } else {
-        mensagem += "Risco de comprometimento da renda";
+        mensagem += "Risco de comprometimento da renda!";
     }
 
     document.getElementById("resultado").innerHTML = mensagem;

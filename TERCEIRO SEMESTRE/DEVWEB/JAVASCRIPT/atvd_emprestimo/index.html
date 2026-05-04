@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIMULADOR DE EMPRÉSTIMO</title>
-
 </head>
 
 <body>
     <div class="card">
         <header>
             <a href="index.html">
-                <h1 id="simulador"> Simulador de Empréstimo </h1>
+                <h1>Simulador de Empréstimo</h1>
             </a>
         </header>
         <main>
-
-            <section class="emprestimo">
-
-                <form action="#">
-
+            <section>
+                <form id="formEmprestimo">
                     <label for="renda">Renda bruta mensal (R$)</label>
                     <input type="number" id="renda" placeholder="Ex: 3000">
 
@@ -30,9 +25,9 @@
                     <input type="number" id="valor" placeholder="Ex: 10000">
 
                     <label for="prazo">Prazo para pagamentos</label>
-                    <input type="number" id="prazo" placeholder="Ex: 24 meses,  mas apenas em algarismos.">
+                    <input type="number" id="prazo" placeholder="Ex: 24">
 
-                    <button onclick="calcular()">Calcular</button>
+                    <button type="submit">Calcular</button>
                     <h3 id="resultado"></h3>
                 </form>
             </section>
