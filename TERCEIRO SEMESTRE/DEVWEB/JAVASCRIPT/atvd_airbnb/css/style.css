@@ -1,18 +1,152 @@
-html {
-    font-size: clamp(1rem, calc(0.5rem + 2vw), 1.625rem);
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+    padding: 1rem;
 }
 
-
-form {
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
 }
-.card {
-    background-color: #f5f5f5;
-    border-radius: 12px;
-    border: 2px solid gainsboro;
-    padding: 2rem;
+
+/* ── Header ── */
+
+.card header p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.card header p span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ── Form  ── */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 0;
+}
+
+form label {
+    padding: 0.4rem 0.6rem 0;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #222;
+}
+
+form input[type="date"],
+form select,
+form input[type="text"] {
+    padding: 0.2rem 0.6rem 0.5rem;
+    font-size: 0.85rem;
     width: 100%;
-    max-width: 500px;
+    cursor: pointer;
+}
+
+label[for="checkin"] {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 1px solid #b0b0b0;
+}
+
+#checkin {
+    grid-column: 1;
+    grid-row: 2;
+    border-right: 1px solid #b0b0b0;
+}
+
+label[for="checkout"] {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#checkout {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+label[for="hospedes"],
+#hospedes {
+    grid-column: 1 / -1;
+    border-top: 1px solid #b0b0b0;
+}
+
+label[for="cupom"],
+#cupom {
+    grid-column: 1 / -1;
+    border-top: 1px solid #b0b0b0;
+}
+
+form button {
+    grid-column: 1 / -1;
+    background-color: #e0185a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    padding: 0.85rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #c01048;
+}
+
+/* ── "Você ainda não será cobrado" ── */
+
+.card main>p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* ── Linhas de breakdown ── */
+
+.card main>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e5e5e5;
+    font-size: 0.9rem;
+}
+
+.card main>div h1 {
+    text-decoration: underline;
+    font-weight: 400;
+    color: #222;
+}
+
+/* ── Footer (total) ── */
+
+.card footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid #ddd;
+    font-weight: 700;
+    font-size: 0.95rem;
 }
