@@ -7,3 +7,4 @@ miniaturas.forEach(function (img) {
     imgDisplay.src = img.src;
   });
 });
+
