@@ -8,31 +8,41 @@ body {
     background-color: black;
 }
 
-div {
+.displays {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+        width: 100%;
+}
+
+.imgShow {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
 .imgShow img {
-    width: 100%;     
-    max-width: 800px;  
-    height: auto;    
-    image-rendering: -webkit-optimize-contrast; 
-    image-rendering: crisp-edges;  
+    width: 100%;
+    height: auto;
 }
 
-.imgMini ul{
+.imgMini ul {
     display: flex;
-    align-items: center;
-    justify-content:center;
     list-style: none;
 }
 
-.imgMini img{
+.imgMini img {
     width: 100px;
     height: 100px;
     margin: 10px;
     cursor: pointer;
+}
+
+#legenda {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
 }
