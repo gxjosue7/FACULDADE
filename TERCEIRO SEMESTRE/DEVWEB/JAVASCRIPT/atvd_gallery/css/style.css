@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.imgShow {
+    padding: 10vw 10vw;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.imgMini ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgMini img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
