@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+}
+
+section {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 50vw;
+    margin: 5vw auto;
+    background-color: gray;
+}
+
+section div h1 {
+    font-size: 2rem;
+}
+
+section div p {
+    font-size: 1.2rem;
+}
+
+section div {
+    display: flex;
+    justify-content: space-between;
+}
+
+section ul {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    gap: 10px;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+section ul li {
+    height: 10vw;
+    background-color: white;
+}
+
+
