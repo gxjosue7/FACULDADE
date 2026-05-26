@@ -1,31 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Captcha</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <section>
-            <div>
-                <h1>Captcha Color</h1>
-                <p>00:00</p>
-            </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <h2>CLIQUE NA COR: <span></span></h2>
-        </section>
+      <section>
+        <div>
+          <h1>Captcha Color</h1>
+          <p>00:00</p>
+        </div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <h2>CLIQUE NA COR: <span></span></h2>
+      </section>
     </main>
 
+    <script>
+      const itens = document.querySelectorAll("li");
+      let corAtual = null;
+      let cronometro = "00:00";
+      let intervalo;
+      let tempoInicio;
 
-    <script src="js/script.js"></script>
-</body>
+      const colors = [
+        { name: "AZUL", value: "#3498db" },
+        { name: "VERDE", value: "#1abc9c" },
+        { name: "ROXO", value: "#9b59b6" },
+        { name: "LARANJA", value: "#e67e22" },
+        { name: "VERMELHO", value: "#e74c3c" },
+        { name: "CINZA", value: "#34495e" },
+      ];
+
+      function embaralhaColors() {
+        return [...colors].sort(() => Math.random() - 0.5);
+      }
+
+      function atualizaCronometro() {
+        tempoInicio = Date.now();
+        intervalo = setInterval(() => {
+          let agora = Date.now();
+          let ms = agora - tempoInicio;
+
+          let segundos = Math.floor(ms / 1000);
+          let minutos = Math.floor(segundos / 60);
+          segundos = segundos % 60;
+
+          let min = minutos < 10 ? "0" + minutos : minutos;
+          let seg = segundos < 10 ? "0" + segundos : segundos;
+
+          cronometro = min + ":" + seg;
+          document.querySelector("section div p").textContent = cronometro;
+        }, 1000);
+      }
+
+      function pintaQuadrados() {
+        const coresEmbaralhadas = embaralhaColors();
+
+        for (let i = 0; i < itens.length; i++) {
+          itens[i].style.backgroundColor = coresEmbaralhadas[i].value;
+          itens[i].onclick = null;
+
+          itens[i].addEventListener("click", function () {
+            if (coresEmbaralhadas[i].name === corAtual.name) {
+              console.log(" Acertou!");
+              setTimeout(() => sorteiaCor(), 500);
+            } else {
+              console.log(" Errou!");
+            }
+          });
+        }
+      }
+
+      function sorteiaCor() {
+        let indice = parseInt(Math.random() * colors.length);
+        let cor = colors[indice];
+
+        corAtual = cor;
+
+        const span = document.querySelector("h2 > span");
+        span.textContent = cor.name;
+        span.style.backgroundColor = cor.value;
+
+        pintaQuadrados();
+      }
+
+      sorteiaCor();
+      atualizaCronometro();
+    </script>
+  </body>
 </html>

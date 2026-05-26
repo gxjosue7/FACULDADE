@@ -1,4 +1,7 @@
 const itens = document.querySelectorAll("li");
+let corAtual = null;
+let cronometro = "00:00";
+let intervalo;
 
 const colors = [
   { name: "AZUL", value: "#3498db" },
@@ -9,24 +12,50 @@ const colors = [
   { name: "CINZA", value: "#34495e" },
 ];
 
-for (let i = 0; i < itens.length; i++) {
-  itens[i].addEventListener("click", function () {
-    let corSpan = document.querySelector("span").style.color
-    if (itens[i].style.background == corSpan) {
-        console.log("Acertou")
-    }
-  });
-
-  itens[i].style.background = colors[i].value;
+function embaralhaColors() {
+  return [...colors].sort(() => Math.random() - 0.5);
 }
 
-    function sorteiaCor() {
-        let indice = parseInt(Math.random() * 6);
-        let cor = colors(indice);
-        const span = document.querySelector("h2 > span");
+function atualizaCronometro() {
+  const inicio = Date.now();
+  intervalo = setInterval(() => {
+    let agora = Date.now();
+    let ms = agora - inicio;
+    cronometro = new Date(ms).toString().substr(15, 8);
+    document.querySelector("section div p").textContent = cronometro;
+  }, 1000);
+}
 
-        span.textContent = cor.name
-        span.style.color = cor.value    
-    }
+function pintaQuadrados() {
+  const coresEmbaralhadas = embaralhaColors();
 
-        sorteiaCor()
+  for (let i = 0; i < itens.length; i++) {
+    itens[i].style.backgroundColor = coresEmbaralhadas[i].value;
+    itens[i].onclick = null;
+
+    itens[i].addEventListener("click", function () {
+      if (coresEmbaralhadas[i].name === corAtual.name) {
+        console.log(" Acertou!");
+        setTimeout(() => sorteiaCor(), 500);
+      } else {
+        console.log(" Errou!");
+      }
+    });
+  }
+}
+
+function sorteiaCor() {
+  let indice = parseInt(Math.random() * colors.length);
+  let cor = colors[indice];
+
+  corAtual = cor;
+
+  const span = document.querySelector("h2 > span");
+  span.textContent = cor.name;
+  span.style.backgroundColor = cor.value;
+
+  pintaQuadrados();
+}
+
+sorteiaCor();
+atualizaCronometro();
