@@ -28,3 +28,6 @@ class Carrinho:
         for item in self.itens:
             pedido.adicionar_item(item.produto, item.quantidade)
         return pedido
+
+        def esvaziar(self) -> None:
+            self.itens.clear()

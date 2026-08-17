@@ -2,13 +2,17 @@ from ecommerce.item_pedido import ItemPedido
 from ecommerce.pagamento import Pagamento
 from ecommerce.status_pedido import StatusPedido
 
-
 class Pedido:
 
     def __init__(self) -> None:
         self._itens: list[ItemPedido] = []
         self._status = StatusPedido.CRIADO
         self._pagamento: Pagamento | None = None
+
+    def confirmar_pagamento(self) -> None:
+        self._transicionar(StatusPedido.PAGO)
+        self._pagamento = Pagamento(self, self.calcular_total())
+        self._pagamento.confirmar()
 
     @property
     def pagamento(self) -> Pagamento | None: 
@@ -41,9 +45,10 @@ class Pedido:
             )
         self._status = novo_status
 
-    def pagar(self) -> None:
+    def confirmar_pagamento(self) -> None:
         self._transicionar(StatusPedido.PAGO)
         self._pagamento = Pagamento(self, self.calcular_total())
+        self._pagamento.confirmar()
 
     def enviar(self) -> None:
         self._transicionar(StatusPedido.ENVIADO)
