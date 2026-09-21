@@ -1,7 +1,7 @@
 from datetime import date
 
 
-class Pagamento:
+class Pagamento(ABC):
 
     def __init__(self, pedido: "Pedido", valor: float) -> None:
         if valor <= 0:
@@ -9,12 +9,11 @@ class Pagamento:
         self._pedido = pedido
         self._valor = valor
         self._data = date.today()
-        self._confirmado = False
+        self._situacao = SituacaoPagamento.PENDENTE
 
     @property
     def pedido(self) -> "Pedido":
         return self._pedido
-
     @property
     def valor(self) -> float:
         return self._valor

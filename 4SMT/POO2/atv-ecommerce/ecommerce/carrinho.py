@@ -29,5 +29,5 @@ class Carrinho:
             pedido.adicionar_item(item.produto, item.quantidade)
         return pedido
 
-        def esvaziar(self) -> None:
-            self.itens.clear()
+    def esvaziar(self) -> None:
+        self.itens.clear()
